@@ -1,6 +1,11 @@
 let recipes = document.querySelectorAll(".recipes");
+let searchterm = document.getElementById("button");
+let input = document.getElementById('field');
 
-fetch("https://recipepuppyproxy.herokuapp.com/api/?q=bacon")
+
+
+searchterm.addEventListener("click", function (a) {
+  fetch(`https://recipepuppyproxy.herokuapp.com/api/?q=${input.value}`)
   .then(
     function (response) {
       if(response.status !== 200) {
@@ -16,7 +21,8 @@ fetch("https://recipepuppyproxy.herokuapp.com/api/?q=bacon")
   .catch(function(err) {
     console.log("Fetch Error :-S", err);
   });
-
+  // a.preventDefault();
+})
 
 function displayOne(data) {
   for (var i = 0; i < data.results.length; i++) {

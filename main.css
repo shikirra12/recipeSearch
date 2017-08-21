@@ -1,3 +1,7 @@
+body {
+  background-color: grey;
+
+}
 input {
   width: 200px;
 }
@@ -5,7 +9,6 @@ input {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: grey;
 }
 .recipes {
   border: 1px grey solid;
@@ -14,6 +17,7 @@ input {
   height: 300px;
   margin-top: 40px;
   background-color: blue;
+
 }
 img {
   width: 200px;
